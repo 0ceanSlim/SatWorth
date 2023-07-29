@@ -30,30 +30,41 @@ class MainActivity : AppCompatActivity() {
         <style>
             /* CSS styles for the Bitcoin Price Tracker */
             body {
-                font-family: Arial, sans-serif;
-                margin: 20px;
+                margin: 0;
+	            padding: 0;
+	            background: #252525;
+	            color: #ffffff;
+	            font-family: monospace, Arial;
+	            font-size: 12px;
+	            font-feature-settings: normal;
+	            overflow-x: hidden;
+	            text-align: center;
             }
             .bitcointodollars {
-                background-color: #f5f5f5;
-                padding: 10px;
+                width: auto;
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-top: 20px;
+                background-color: #252525;
                 border: 1px solid #ccc;
-                border-radius: 5px;
+                border-radius: 8px;
+                padding: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             }
             h1 {
-                color: #333;
+	            color: #ff7500;
             }
             #bitcoin-price {
                 font-size: 24px;
                 font-weight: bold;
-                color: #0066cc;
-                margin-top: 10px;
+                text-align: center;
+                margin: 10px;
             }
         </style>
     </head>
     <body>
         <div class="bitcointodollars">
-            <h1>Bitcoin Price Tracker.</h1>
-            <p> this is a p </p>
+            <h1>Bitcoin Price Tracker</h1>
             <div id="bitcoin-price"></div>
         <script>
             // Fetch the Bitcoin price from the CoinGecko API
@@ -63,7 +74,7 @@ class MainActivity : AppCompatActivity() {
                     const bitcoinPrice = data['bitcoin']['usd'];
                     // Update the Bitcoin price on the website
                     const bitcoinPriceElement = document.getElementById('bitcoin-price');
-                    bitcoinPriceElement.textContent = '1 Bitcoin = $' + bitcoinPrice.toFixed(2); // Display the Bitcoin price
+                    bitcoinPriceElement.textContent = '1 BTC = $' + bitcoinPrice.toFixed(2); // Display the Bitcoin price
                 })
                 .catch(error => console.error(error));
         </script>
