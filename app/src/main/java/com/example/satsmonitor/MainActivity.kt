@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         // Clear the WebView cache (optional)
         webView.clearCache(true)
 
-        // Load the HTML content from the "bitcoin_price_tracker.html" file
+        // Load the HTML content from the "index.html" file
         val htmlContent = try {
             assets.open("index.html").bufferedReader().use { it.readText() }
         } catch (e: IOException) {
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
             "<html><body><h1>Error loading HTML</h1></body></html>"
         }
 
-        // Load the JavaScript code from the "bitcoin_price_tracker.js" file
+        // Load the JavaScript code from the "script.js" file
         val javaScriptCode = try {
             assets.open("script.js").bufferedReader().use { it.readText() }
         } catch (e: IOException) {
@@ -42,8 +42,27 @@ class MainActivity : AppCompatActivity() {
             ""
         }
 
-        // Inject the JavaScript code into the HTML content
-        val finalHtmlContent = "$htmlContent<script>$javaScriptCode</script>"
+        // Load the CSS code from the "style.css" file
+        val cssCode = try {
+            assets.open("style.css").bufferedReader().use { it.readText() }
+        } catch (e: IOException) {
+            e.printStackTrace()
+            // If loading CSS fails, set an empty style
+            ""
+        }
+
+        // Combine the HTML, CSS, and JavaScript code
+        val finalHtmlContent = """
+            <html>
+            <head>
+                <style type="text/css">$cssCode</style>
+            </head>
+            <body>
+                $htmlContent
+                <script>$javaScriptCode</script>
+            </body>
+            </html>
+        """.trimIndent()
 
         webView.loadDataWithBaseURL(null, finalHtmlContent, "text/html", "UTF-8", null)
     }

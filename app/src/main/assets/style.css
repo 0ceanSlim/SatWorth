@@ -1,0 +1,35 @@
+/* CSS styles for the Bitcoin Price Tracker */
+body {
+    margin: 0;
+    padding: 0;
+    background: #252525;
+    color: #ffffff;
+    font-family: monospace, Arial;
+    font-size: 12px;
+    font-feature-settings: normal;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+.bitcointodollars {
+    width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    background-color: #252525;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #ff7500;
+}
+
+#bitcoin-price {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+}
