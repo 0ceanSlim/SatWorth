@@ -53,6 +53,7 @@ class MainActivity : AppCompatActivity() {
     <body>
         <div class="bitcointodollars">
             <h1>Bitcoin Price Tracker.</h1>
+            <p> this is a p </p>
             <div id="bitcoin-price"></div>
         <script>
             // Fetch the Bitcoin price from the CoinGecko API
