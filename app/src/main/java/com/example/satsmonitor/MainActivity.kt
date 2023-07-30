@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
 
         // Load the HTML content from the "index.html" file
         val htmlContent = try {
+            // Load the HTML content from the "index.html" file
             assets.open("index.html").bufferedReader().use { it.readText() }
         } catch (e: IOException) {
             e.printStackTrace()
@@ -52,17 +53,17 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Combine the HTML, CSS, and JavaScript code
-        val finalHtmlContent = """
-            <html>
-            <head>
-                <style type="text/css">$cssCode</style>
-            </head>
-            <body>
-                $htmlContent
-                <script>$javaScriptCode</script>
-            </body>
-            </html>
-        """.trimIndent()
+val finalHtmlContent = """
+<html>
+<head>
+    <style type="text/css">$cssCode</style>
+</head>
+<body>
+    $htmlContent
+    <script>$javaScriptCode</script>
+</body>
+</html>
+""".trimIndent()
 
         webView.loadDataWithBaseURL(null, finalHtmlContent, "text/html", "UTF-8", null)
     }
