@@ -11,7 +11,7 @@ body {
     text-align: center;
 }
 
-.bitcointodollars {
+.container {
     width: auto;
     margin-left: 20px;
     margin-right: 20px;
@@ -28,6 +28,31 @@ h1 {
 }
 
 #bitcoin-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+}
+
+.bitcoin-logo {
+    height: 28px;
+    /* Adjust this to match the font size of the Bitcoin price */
+    width: 28px;
+    margin-right: 5px;
+    /* Add some space between the logo and the price */
+}
+
+.bitcoin-logo img {
+    height: 36px;
+    /* Adjust this to match the font size of the Bitcoin price */
+    width: 36px;
+    /* Add some space between the logo and the price */
+}
+
+#dollars-to-sats {
     font-size: 24px;
     font-weight: bold;
     text-align: center;

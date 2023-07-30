@@ -65,6 +65,9 @@ val finalHtmlContent = """
 </html>
 """.trimIndent()
 
+// Define the base URL for resolving relative paths (e.g., image source)
+        val baseUrl = "file:///android_asset/"
+
         webView.loadDataWithBaseURL(null, finalHtmlContent, "text/html", "UTF-8", null)
     }
 }
