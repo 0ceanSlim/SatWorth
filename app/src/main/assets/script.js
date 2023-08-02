@@ -31,7 +31,7 @@ function updateBitcoinPrice() {
 // Function to refresh the Bitcoin price every 30 seconds
 function refreshBitcoinPrice() {
     updateBitcoinPrice(); // Call the function immediately to display the price on page load
-    setInterval(updateBitcoinPrice, 5000); // Call the function every 5 seconds (5,000 milliseconds)
+    setInterval(updateBitcoinPrice, 1000); // Call the function every 1 second (1,000 milliseconds)
 }
 
 // Call the function to refresh the Bitcoin price
