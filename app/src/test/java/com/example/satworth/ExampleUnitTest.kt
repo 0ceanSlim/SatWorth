@@ -1,4 +1,4 @@
-package com.example.satsmonitor
+package com.example.satworth
 
 import org.junit.Test
 

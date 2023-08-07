@@ -1,4 +1,4 @@
-package com.example.satsmonitor
+package com.example.satworth
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
