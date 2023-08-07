@@ -11,6 +11,14 @@ body {
     text-align: center;
 }
 
+a {
+    color: #ff7500;
+}
+
+a:hover {
+    color: rgb(149, 0, 207);
+}
+
 .container {
     width: auto;
     margin-left: 20px;
@@ -63,4 +71,53 @@ h1 {
     font-weight: semi-bold;
     text-align: center;
     margin: 10px;
+}
+
+.affiliates {
+    max-width: 60%;
+    max-height: 25%;
+    position: fixed;
+    bottom: 5%;
+    right: 0%;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.affiliates img {
+    justify-content: center;
+    margin: 10px;
+    float: left;
+    width: 16px;
+    height: auto;
+    padding-right: 10px;
+}
+
+.affiliate1{
+    padding: 10px;
+    border: #ffffff;
+    border-style: solid;
+    border-radius: 8px;
+    border-width: 2px;
+    margin: 10px;
+    height: fit-content;
+}
+.affiliate2{
+    padding: 10px;
+    border: #ffffff;
+    border-style: solid;
+    border-radius: 8px;
+    border-width: 2px;
+    margin: 10px;
+    height: fit-content;
+}
+.affiliate3{
+    padding: 10px;
+    border: #ffffff;
+    border-style: solid;
+    border-radius: 8px;
+    border-width: 2px;
+    margin: 10px;
+    height: fit-content;
 }
