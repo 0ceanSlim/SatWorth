@@ -1,0 +1,66 @@
+/* CSS styles for the Bitcoin Price Tracker */
+body {
+    margin: 0;
+    padding: 0;
+    background: #202020;
+    color: #ffffff;
+    font-family: monospace, Arial;
+    font-size: 12px;
+    font-feature-settings: normal;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+.container {
+    width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    background-color: #282828;
+    border: 3px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    align-items: center; /* Center items vertically within the container */
+    justify-content: center; /* Center items horizontally within the container */
+}
+.price-display {
+    width: auto;
+    margin-right: 10px;
+    padding: 10px;
+    display: flex; /* Add this to create a flexbox layout */
+    align-items: center; /* Center items vertically within the container */
+    justify-content: center; /* Center items horizontally within the container */
+}
+
+h1 {
+    color: #ff7500;
+}
+
+#bitcoin-price {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.bitcoin-logo {
+    height: 50px;
+    /* Adjust this to match the font size of the Bitcoin price */
+    width: 50px;
+    margin-right: 10px;
+    /* Add some space between the logo and the price */
+}
+
+.bitcoin-logo img {
+    height: 50px;
+    /* Adjust this to match the font size of the Bitcoin price */
+    width: 50px;
+    /* Add some space between the logo and the price */
+}
+
+#dollars-to-sats {
+    font-size: 24px;
+    font-weight: semi-bold;
+    text-align: center;
+    margin: 10px;
+}
