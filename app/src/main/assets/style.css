@@ -11,6 +11,10 @@ body {
     text-align: center;
 }
 
+h1 {
+    color: #ff7500;
+}
+
 a {
     color: #ff7500;
 }
@@ -41,10 +45,6 @@ a:hover {
     justify-content: center; /* Center items horizontally within the container */
 }
 
-h1 {
-    color: #ff7500;
-}
-
 #bitcoin-price {
     font-size: 26px;
     font-weight: bold;
@@ -73,12 +73,12 @@ h1 {
     margin: 10px;
 }
 
-.affiliates {
+/*.affiliates {
     max-width: 60%;
     max-height: 25%;
     position: fixed;
-    bottom: 200px;
-    right: 0%;
+    bottom: 8px;
+    right: 8px;
     padding: 10px;
     font-size: 12px;
     font-weight: bolder;
@@ -120,4 +120,33 @@ h1 {
     border-width: 2px;
     margin: 10px;
     height: fit-content;
-}
+}*/
+
+  /* CSS for the container */
+  #exchange {
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    bottom: 10px;
+    right: 10px;
+    position: fixed;
+  }
+
+  /* CSS for the text */
+  #exchange h2 {
+    font-size: 24px;
+    margin-top: 0;
+  }
+
+  /* CSS for the app images */
+  .app-image {
+    display: inline-block;
+    margin: 10px;
+  }
+
+  .app-image img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+  }
