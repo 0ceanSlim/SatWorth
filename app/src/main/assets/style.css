@@ -23,6 +23,20 @@ a:hover {
     color: rgb(149, 0, 207);
 }
 
+.currency-dropdown {
+    width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    background-color: #282828;
+    border: 3px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    align-items: center; /* Center items vertically within the container */
+    justify-content: center; /* Center items horizontally within the container */
+}
+
 .container {
     width: auto;
     margin-left: 20px;
@@ -67,10 +81,17 @@ a:hover {
 }
 
 #dollars-to-sats {
-    font-size: 24px;
-    font-weight: semi-bold;
-    text-align: center;
-    margin: 10px;
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+        background-color: #282828;
+        border: 3px solid #ccc;
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        align-items: center; /* Center items vertically within the container */
+        justify-content: center; /* Center items horizontally within the container */
 }
 
 .satstodollars {
