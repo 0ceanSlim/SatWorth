@@ -52,8 +52,26 @@ class MainActivity : AppCompatActivity() {
             ""
         }
 
-// Combine the content of both scripts
-        val javaScriptCode = "$firstScript\n$secondScript"
+// Load the content of the second script file
+        val thirdScript = try {
+            assets.open("script3.js").bufferedReader().use { it.readText() }
+        } catch (e: IOException) {
+            e.printStackTrace()
+            // If loading the third script fails, set an empty script
+            ""
+        }
+
+// Load the content of the second script file
+        val fourthScript = try {
+            assets.open("script4.js").bufferedReader().use { it.readText() }
+        } catch (e: IOException) {
+            e.printStackTrace()
+            // If loading the fourth script fails, set an empty script
+            ""
+        }
+
+// Combine the content of scripts
+        val javaScriptCode = "$firstScript\n$secondScript\n$thirdScript\n$fourthScript"
 
         // Load the CSS code from the "style.css" file
         val cssCode = try {
