@@ -73,6 +73,30 @@ a:hover {
     margin: 10px;
 }
 
+.satstodollars {
+    width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    background-color: #282828;
+    border: 3px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    align-items: center; /* Center items vertically within the container */
+    justify-content: center; /* Center items horizontally within the container */
+}
+
+#sats-input {
+    font-size: 16px;
+    border-radius: 7px;
+    font-family: monospace;
+    font-style: bold;
+    color: rgb(196, 140, 0);
+    margin-right: 5px;
+    padding-right: 5px;
+}
+
 /*.affiliates {
     max-width: 60%;
     max-height: 25%;

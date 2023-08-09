@@ -35,13 +35,25 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Load the JavaScript code from the "script.js" file
-        val javaScriptCode = try {
+        val firstScript = try {
             assets.open("script.js").bufferedReader().use { it.readText() }
         } catch (e: IOException) {
             e.printStackTrace()
             // If loading JavaScript fails, set an empty script
             ""
         }
+
+// Load the content of the second script file
+        val secondScript = try {
+            assets.open("script2.js").bufferedReader().use { it.readText() }
+        } catch (e: IOException) {
+            e.printStackTrace()
+            // If loading the second script fails, set an empty script
+            ""
+        }
+
+// Combine the content of both scripts
+        val javaScriptCode = "$firstScript\n$secondScript"
 
         // Load the CSS code from the "style.css" file
         val cssCode = try {
