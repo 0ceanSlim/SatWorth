@@ -3,20 +3,21 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-
+<body>
 <div class="settings"><img src='file:///android_asset/images/cog.png' alt='cog' />
     <div class="theme-dropdown">
-        <label for="theme-select">Theme:</label>
+        <label for="theme-select"> </label>
         <select id="theme-select">
             <option value="usd">Dark</option>
             <option value="ars">Alt</option>
         </select>
     </div>
     <div class="currency-dropdown">
-        <label for="currency-select">Currency:</label>
+        <label for="currency-select"> </label>
         <select id="currency-select">
-            <option value="usd">Dollar</option>
+            <option value="usd">U.S. Dollar</option>
             <option value="ars">Argentine Peso</option>
             <option value="brl">Brazilian Real</option>
             <option value="cny">Chinese Yuan</option>
@@ -35,7 +36,6 @@
     </div>
 </div>
 
-<body>
 <div class="container">
     <div class="price-display">
         <div class="bitcoin-logo">
@@ -47,23 +47,14 @@
 
 <div id="dollars-to-sats"></div>
 
-</body>
-
 <div class="satstodollars">
-    <h1>Sats to $'s Calc</h1>
+    <h1>Sats to fiat Calc</h1>
     <label for="sats-input">Enter the amount of Bitcoin in satoshis:</label>
     <br>
     <input type="number" id="sats-input">
     <br>
     <output id="dollars-output"></output>
 </div>
-
-<!--<div class="affiliates">
-    <div class="affiliate1"><a href="https://www.swanbitcoin.com/oceanslim"><img src="file:///android_asset/images/swan.png"> Dollar Cost Average Bitcoin with Swan!<br/>Free Automated withdrawal  </a></div>
-    <div class="affiliate2"><a href="https://store.blockstream.com/?ref=3322"><img src="file:///android_asset/images/blockstream.jpg"> Shop Blockstream's Store    (use code "HAPPYTAVERN" for 10% off Jade HW Wallet) </a></div>
-    <div class="affiliate3"><a href="use.foldapp.com/r/TT93PV3E"><img src="file:///android_asset/images/Fold.png"> Stack Sats on your debit card purchases </a></div>
-
-</div>-->
 
 <div id="exchange">
     <h2>Buy Bitcoin Here 👇</h2>
@@ -78,4 +69,5 @@
     </div>
   </div>
 
+</body>
 </html>

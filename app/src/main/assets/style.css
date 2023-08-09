@@ -37,6 +37,12 @@ a:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+.settings img {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+}
+
 .cog-image {
     margin-right: 20px; /* Add margin to separate cog image from dropdowns */
 }
@@ -57,6 +63,7 @@ a:hover {
 #theme-select,
 #currency-select {
     width: fit-content;
+    height: 40px;
     padding: 8px;
     background-color: #282828;
     border: 3px solid #ccc;
@@ -64,6 +71,12 @@ a:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     font-family: monospace;
     color: #ffffff;
+}
+
+#currency-select img {
+    width: 70px;
+    height: 38px;
+    border-radius:2px
 }
 
 .container {
@@ -141,60 +154,13 @@ a:hover {
     font-size: 16px;
     border-radius: 7px;
     font-family: monospace;
-    font-style: bold;
+    background: #282828;
+    font-style: bolder;
     color: rgb(196, 140, 0);
     margin-right: 5px;
     padding-right: 5px;
-}
-
-/*.affiliates {
-    max-width: 60%;
-    max-height: 25%;
-    position: fixed;
-    bottom: 8px;
-    right: 8px;
-    padding: 10px;
-    font-size: 12px;
-    font-weight: bolder;
     text-align: center;
 }
-
-.affiliates img {
-    justify-content: center;
-    float: left;
-    width: 50px;
-    height: 50px;
-    padding-right: 10px;
-    border-radius: 10px;
-}
-
-.affiliate1{
-    padding: 5px;
-    border: #ffffff;
-    border-style: solid;
-    border-radius: 8px;
-    border-width: 2px;
-    margin: 10px;
-    height: fit-content;
-}
-.affiliate2{
-    padding: 10px;
-    border: #ffffff;
-    border-style: solid;
-    border-radius: 8px;
-    border-width: 2px;
-    margin: 10px;
-    height: fit-content;
-}
-.affiliate3{
-    padding: 10px;
-    border: #ffffff;
-    border-style: solid;
-    border-radius: 8px;
-    border-width: 2px;
-    margin: 10px;
-    height: fit-content;
-}*/
 
   /* CSS for the container */
   #exchange {
@@ -209,19 +175,19 @@ a:hover {
 
   /* CSS for the text */
   #exchange h2 {
-    font-size: 16px;
+    font-size: 12px;
     margin-top: 0;
   }
 
   /* CSS for the app images */
   .app-image {
     display: inline-block;
-    margin: 10px;
+    margin: 6px;
   }
 
   .app-image img {
-    width: 50px;
-    height: 50px;
-    border-radius: 16px;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
     border: 1px solid #909090;
   }

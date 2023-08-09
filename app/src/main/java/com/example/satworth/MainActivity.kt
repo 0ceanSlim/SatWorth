@@ -34,53 +34,27 @@ class MainActivity : AppCompatActivity() {
             "<html><body><h1>Error loading HTML</h1></body></html>"
         }
 
-        // Load the JavaScript code from the "script.js" file
-        val firstScript = try {
-            assets.open("script.js").bufferedReader().use { it.readText() }
-        } catch (e: IOException) {
-            e.printStackTrace()
-            // If loading JavaScript fails, set an empty script
-            ""
+        val assetManager = assets
+        val scriptFiles = listOf("script.js", "script2.js", "script3.js", "script4.js")
+
+        val scriptContents = scriptFiles.map { fileName ->
+            try {
+                assetManager.open(fileName).bufferedReader().use { it.readText() }
+            } catch (e: IOException) {
+                e.printStackTrace()
+                "/* Error loading script: $fileName */"
+            }
         }
 
-// Load the content of the second script file
-        val secondScript = try {
-            assets.open("script2.js").bufferedReader().use { it.readText() }
-        } catch (e: IOException) {
-            e.printStackTrace()
-            // If loading the second script fails, set an empty script
-            ""
-        }
-
-// Load the content of the second script file
-        val thirdScript = try {
-            assets.open("script3.js").bufferedReader().use { it.readText() }
-        } catch (e: IOException) {
-            e.printStackTrace()
-            // If loading the third script fails, set an empty script
-            ""
-        }
-
-// Load the content of the second script file
-        val fourthScript = try {
-            assets.open("script4.js").bufferedReader().use { it.readText() }
-        } catch (e: IOException) {
-            e.printStackTrace()
-            // If loading the fourth script fails, set an empty script
-            ""
-        }
-
-// Combine the content of scripts
-        val javaScriptCode = "$firstScript\n$secondScript\n$thirdScript\n$fourthScript"
-
-        // Load the CSS code from the "style.css" file
         val cssCode = try {
-            assets.open("style.css").bufferedReader().use { it.readText() }
+            assetManager.open("style.css").bufferedReader().use { it.readText() }
         } catch (e: IOException) {
             e.printStackTrace()
-            // If loading CSS fails, set an empty style
-            ""
+            "/* Error loading style.css */"
         }
+        
+        val javaScriptCode = scriptContents.joinToString("\n")
+
 
         // Combine the HTML, CSS, and JavaScript code
 val finalHtmlContent = """
