@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.webkit.WebView
 import android.webkit.WebSettings
-import com.example.satsmonitor.R
+import com.example.satworth.R
 import java.io.IOException
 
 class MainActivity : AppCompatActivity() {
@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         val assetManager = assets
-        val scriptFiles = listOf("viewBitcoinPrice.js", "viewFiatToSats.js", "selectCurrency.js", "calcSatsToFiat.js")
+        val scriptFiles = listOf("scripts/viewBitcoinPrice.js", "scripts/viewFiatToSats.js", "scripts/selectCurrency.js", "scripts/calcSatsToFiat.js")
 
         val scriptContents = scriptFiles.map { fileName ->
             try {
@@ -47,18 +47,21 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        val cssCode = try {
-            assetManager.open("style.css").bufferedReader().use { it.readText() }
-        } catch (e: IOException) {
-            e.printStackTrace()
-            "/* Error loading style.css */"
+        val cssFiles = listOf("style.css", "styles/settings.css") // List of your CSS files
+
+        val cssCode = cssFiles.joinToString("\n") { fileName ->
+            try {
+                assetManager.open(fileName).bufferedReader().use { it.readText() }
+            } catch (e: IOException) {
+                e.printStackTrace()
+                "/* Error loading $fileName */"
+            }
         }
-        
+
         val javaScriptCode = scriptContents.joinToString("\n")
 
-
         // Combine the HTML, CSS, and JavaScript code
-val finalHtmlContent = """
+        val finalHtmlContent = """
 <html>
 <head>
     <style type="text/css">$cssCode</style>
@@ -70,7 +73,7 @@ val finalHtmlContent = """
 </html>
 """.trimIndent()
 
-// Define the base URL for resolving relative paths (e.g., image source)
+        // Define the base URL for resolving relative paths (e.g., image source)
         val baseUrl = "file:///android_asset/"
 
         webView.loadDataWithBaseURL(null, finalHtmlContent, "text/html", "UTF-8", null)

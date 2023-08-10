@@ -21,7 +21,7 @@ function updateSatsToDollarsConversion() {
             })
             .catch(error => console.error(error));
     } else {
-        dollarsOutputElement.textContent = 'Invalid input';
+        dollarsOutputElement.textContent = '';
     }
 }
 

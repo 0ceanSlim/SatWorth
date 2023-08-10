@@ -1,0 +1,55 @@
+.settings {
+    width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #282828;
+    border: 3px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.settings img {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+}
+
+.cog-image {
+    margin-right: 20px; /* Add margin to separate cog image from dropdowns */
+}
+
+.theme-dropdown,
+.currency-dropdown {
+    flex: 1; /* Distribute available space equally among dropdowns */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align theme dropdown to the right */
+    margin-right: 10px; /* Add some space between the dropdowns */
+}
+
+.currency-dropdown {
+    justify-content: center; /* Align currency dropdown to the center */
+}
+
+#theme-select,
+#currency-select {
+    width: fit-content;
+    height: 40px;
+    padding: 8px;
+    background-color: #282828;
+    border: 3px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-family: monospace;
+    color: #ffffff;
+}
+
+#currency-select img {
+    width: 70px;
+    height: 38px;
+    border-radius:2px
+}

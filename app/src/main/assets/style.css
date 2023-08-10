@@ -11,8 +11,12 @@ body {
     text-align: center;
 }
 
+p {
+    font-size: 6px;
+}
+
 h1 {
-    color: #ff7500;
+    color: #f7931a;
 }
 
 a {
@@ -21,62 +25,6 @@ a {
 
 a:hover {
     color: rgb(149, 0, 207);
-}
-
-.settings {
-    width: auto;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    background-color: #282828;
-    border: 3px solid #ccc;
-    border-radius: 8px;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.settings img {
-    width: 25px;
-    height: 25px;
-    margin-bottom: 10px;
-}
-
-.cog-image {
-    margin-right: 20px; /* Add margin to separate cog image from dropdowns */
-}
-
-.theme-dropdown,
-.currency-dropdown {
-    flex: 1; /* Distribute available space equally among dropdowns */
-    display: flex;
-    align-items: center;
-    justify-content: flex-end; /* Align theme dropdown to the right */
-    margin-right: 10px; /* Add some space between the dropdowns */
-}
-
-.currency-dropdown {
-    justify-content: center; /* Align currency dropdown to the center */
-}
-
-#theme-select,
-#currency-select {
-    width: fit-content;
-    height: 40px;
-    padding: 8px;
-    background-color: #282828;
-    border: 3px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    font-family: monospace;
-    color: #ffffff;
-}
-
-#currency-select img {
-    width: 70px;
-    height: 38px;
-    border-radius:2px
 }
 
 .container {
@@ -134,6 +82,10 @@ a:hover {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         align-items: center; /* Center items vertically within the container */
         justify-content: center; /* Center items horizontally within the container */
+        color: #ffffff;
+        font-family: monospace, Arial;
+        font-size: 20px;
+        font-style: bolder;
 }
 
 .satstodollars {
@@ -151,12 +103,12 @@ a:hover {
 }
 
 #sats-input {
-    font-size: 16px;
+    font-size: 18px;
     border-radius: 7px;
     font-family: monospace;
     background: #282828;
     font-style: bolder;
-    color: rgb(196, 140, 0);
+    color: #f7931a;
     margin-right: 5px;
     padding-right: 5px;
     text-align: center;
