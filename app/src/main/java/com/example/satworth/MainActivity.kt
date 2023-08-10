@@ -1,9 +1,10 @@
-package com.example.satsmonitor
+package com.example.satworth
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.webkit.WebView
 import android.webkit.WebSettings
+import com.example.satsmonitor.R
 import java.io.IOException
 
 class MainActivity : AppCompatActivity() {
@@ -24,10 +25,10 @@ class MainActivity : AppCompatActivity() {
         // Clear the WebView cache (optional)
         webView.clearCache(true)
 
-        // Load the HTML content from the "index.html" file
+        // Load the HTML content from the "app.html" file
         val htmlContent = try {
-            // Load the HTML content from the "index.html" file
-            assets.open("index.html").bufferedReader().use { it.readText() }
+            // Load the HTML content from the "app.html" file
+            assets.open("app.html").bufferedReader().use { it.readText() }
         } catch (e: IOException) {
             e.printStackTrace()
             // If loading HTML fails, set some default content
@@ -35,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         val assetManager = assets
-        val scriptFiles = listOf("script.js", "script2.js", "script3.js", "script4.js")
+        val scriptFiles = listOf("viewBitcoinPrice.js", "viewFiatToSats.js", "selectCurrency.js", "calcSatsToFiat.js")
 
         val scriptContents = scriptFiles.map { fileName ->
             try {
