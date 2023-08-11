@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         val assetManager = assets
-        val scriptFiles = listOf("scripts/viewBitcoinPrice.js", "scripts/viewFiatToSats.js", "scripts/selectCurrency.js", "scripts/calcSatsToFiat.js")
+        val scriptFiles = listOf("scripts/viewBitcoinPrice.js", "scripts/viewFiatToSats.js", "scripts/selectCurrency.js", "scripts/calcSatsToFiat.js","scripts/transformExchange.js")
 
         val scriptContents = scriptFiles.map { fileName ->
             try {

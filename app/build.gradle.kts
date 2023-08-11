@@ -11,8 +11,8 @@ android {
         applicationId = "com.example.satworth"
         minSdk = 24
         targetSdk = 33
-        versionCode = 4
-        versionName = "0.1.6"
+        versionCode = 5
+        versionName = "0.1.61"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
