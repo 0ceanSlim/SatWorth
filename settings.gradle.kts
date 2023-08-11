@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Sats Monitor"
+rootProject.name = "SatWorth"
 include(":app")

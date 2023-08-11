@@ -1,13 +1,14 @@
 /* CSS styles for the Bitcoin Price Tracker */
 body {
     margin: 0;
-    padding: 0;
+    padding-left: 20px;
+    padding-right: 20px;
     background: #202020;
     color: #ffffff;
     font-family: monospace, Arial;
     font-size: 12px;
     font-feature-settings: normal;
-    overflow: hidden;
+    overflow-x: hidden;
     text-align: center;
 }
 
@@ -29,8 +30,6 @@ a:hover {
 
 .container {
     width: auto;
-    margin-left: 20px;
-    margin-right: 20px;
     margin-top: 20px;
     background-color: #282828;
     border: 3px solid #ccc;
@@ -72,8 +71,6 @@ a:hover {
 
 #dollars-to-sats {
         width: auto;
-        margin-left: 20px;
-        margin-right: 20px;
         margin-top: 20px;
         background-color: #282828;
         border: 3px solid #ccc;
@@ -90,8 +87,6 @@ a:hover {
 
 .satstodollars {
     width: auto;
-    margin-left: 20px;
-    margin-right: 20px;
     margin-top: 20px;
     background-color: #282828;
     border: 3px solid #ccc;
@@ -106,7 +101,7 @@ a:hover {
     font-size: 18px;
     border-radius: 7px;
     font-family: monospace;
-    background: #282828;
+    background: #101010;
     font-style: bolder;
     color: #f7931a;
     margin-right: 5px;
@@ -118,7 +113,7 @@ a:hover {
   #exchange {
     border: 2px solid #ffffff;
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     position: fixed;
     bottom: 10px;
@@ -138,8 +133,8 @@ a:hover {
   }
 
   .app-image img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 8px;
     border: 1px solid #909090;
   }
