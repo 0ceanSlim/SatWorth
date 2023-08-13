@@ -1,0 +1,17 @@
+.satstodollars {
+    width: auto;
+    align-items: center; /* Center items vertically within the container */
+    justify-content: center; /* Center items horizontally within the container */
+}
+
+#sats-input {
+    font-size: 18px;
+    border-radius: 7px;
+    font-family: monospace;
+    background: #101010;
+    font-style: bolder;
+    color: #f7931a;
+    margin-right: 5px;
+    padding-right: 5px;
+    text-align: center;
+}

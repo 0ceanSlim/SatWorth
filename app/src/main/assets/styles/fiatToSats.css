@@ -1,0 +1,9 @@
+#dollars-to-sats {
+    width: auto;
+    align-items: center; /* Center items vertically within the container */
+    justify-content: center; /* Center items horizontally within the container */
+    color: #ffffff;
+    font-family: monospace, Arial;
+    font-size: 20px;
+    font-style: bolder;
+}

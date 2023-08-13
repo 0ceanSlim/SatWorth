@@ -1,0 +1,27 @@
+#bitcoin-price {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.bitcoin-logo {
+    height: 50px;
+    /* Adjust this to match the font size of the Bitcoin price */
+    width: 50px;
+    margin-right: 10px;
+    /* Add some space between the logo and the price */
+}
+
+.bitcoin-logo img {
+    height: 50px;
+    /* Adjust this to match the font size of the Bitcoin price */
+    width: 50px;
+    /* Add some space between the logo and the price */
+}
+.price-display {
+    width: auto;
+    margin-right: 10px;
+    display: flex; /* Add this to create a flexbox layout */
+    align-items: center; /* Center items vertically within the container */
+    justify-content: center; /* Center items horizontally within the container */
+}
