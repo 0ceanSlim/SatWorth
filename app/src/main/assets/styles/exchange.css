@@ -1,0 +1,29 @@
+/* CSS for the container */
+#exchange {
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+/* CSS for the text */
+#exchange h2 {
+    font-size: 12px;
+    margin-top: 0;
+}
+
+/* CSS for the app images */
+.app-image {
+    display: inline-block;
+    margin: 6px;
+}
+
+.app-image img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #909090;
+}

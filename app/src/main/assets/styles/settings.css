@@ -1,24 +1,14 @@
 .settings {
     width: auto;
-    margin-top: 20px;
     display: flex;
     align-items: center;
-    background-color: #282828;
-    border: 3px solid #ccc;
-    border-radius: 8px;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .settings img {
     width: 25px;
     height: 25px;
-    margin-bottom: 20px;
-    margin-right: 10px; /* Add margin to separate cog image from dropdowns */
-}
-
-.cog-image {
-
+    margin-bottom: 40px;
+    margin-right: 20px; /* Add margin to separate cog image from dropdowns */
 }
 
 .theme-dropdown,
@@ -45,10 +35,4 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     font-family: monospace;
     color: #ffffff;
-}
-
-#currency-select img {
-    width: 70px;
-    height: 38px;
-    border-radius:2px
 }

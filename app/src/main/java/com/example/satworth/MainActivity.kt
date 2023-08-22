@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        val cssFiles = listOf("style.css", "styles/settings.css") // List of your CSS files
+        val cssFiles = listOf("style.css", "styles/settings.css", "styles/bitcoinPrice.css","styles/exchange.css", "styles/fiatToSats.css", "styles/satsToFiat.css") // List of your CSS files
 
         val cssCode = cssFiles.joinToString("\n") { fileName ->
             try {
