@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.webkit.WebView
 import android.webkit.WebSettings
-import com.example.satworth.R
 import java.io.IOException
 
 class MainActivity : AppCompatActivity() {
@@ -47,7 +46,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        val cssFiles = listOf("style.css", "styles/settings.css", "styles/bitcoinPrice.css","styles/exchange.css", "styles/fiatToSats.css", "styles/satsToFiat.css") // List of your CSS files
+        val cssFiles = listOf("themes/themeDark.css", /*"themes/themeMidnight.css", "themes/themeLava.css", "themes/themeSolar.css",*/ "styles/settings.css", "styles/bitcoinPrice.css","styles/exchange.css", "styles/fiatToSats.css", "styles/satsToFiat.css") // List of your CSS files
 
         val cssCode = cssFiles.joinToString("\n") { fileName ->
             try {

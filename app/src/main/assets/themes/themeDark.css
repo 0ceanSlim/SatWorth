@@ -1,0 +1,55 @@
+/* CSS styles for the Bitcoin Price Tracker */
+body {
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #151515;
+    font-family: monospace, Arial;
+    overflow-x: hidden;
+    text-align: center;
+    color: #ffffff;
+}
+
+.container {
+    width: auto;
+    margin-top: 20px;
+    background-color: #252525;
+    border: 3px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    align-items: center; /* Center items vertically within the container */
+    justify-content: center; /* Center items horizontally within the container */
+}
+
+#theme-select,
+#currency-select {
+    background-color: #282828;
+    border: 3px solid #ccc;
+    color: #ffffff;
+}
+
+#exchange {
+    border: 2px solid #ccc;
+    background-color: #252525;
+}
+
+h1 {
+    font-size: 30;
+    font-style: bolder;
+}
+h2 {
+    font-size: 20;
+    font-style: bolder;
+}
+h3 {
+    font-size: 10;
+    font-style: bold;
+}
+
+a {
+    color: #f7931a;
+}
+
+a:hover {
+    color: #8154e9;
+}

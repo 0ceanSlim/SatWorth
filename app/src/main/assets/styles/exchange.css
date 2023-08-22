@@ -1,8 +1,7 @@
 /* CSS for the container */
 #exchange {
-    border: 2px solid #ffffff;
-    border-radius: 10px;
     padding: 10px;
+    border-radius: 6px;
     text-align: center;
     position: fixed;
     bottom: 10px;
@@ -24,6 +23,6 @@
 .app-image img {
     width: 40px;
     height: 40px;
-    border-radius: 8px;
+    border-radius: 10px;
     border: 1px solid #909090;
 }

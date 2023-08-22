@@ -13,7 +13,7 @@ function updateBitcoinPrice(selectedCurrency) {
 
 function refreshBitcoinPrice(selectedCurrency) {
     updateBitcoinPrice(selectedCurrency);
-    setInterval(() => updateBitcoinPrice(selectedCurrency), 30000);
+    setInterval(() => updateBitcoinPrice(selectedCurrency), 300000);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
