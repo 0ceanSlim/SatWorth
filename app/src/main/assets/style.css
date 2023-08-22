@@ -1,95 +1,18 @@
 /* CSS styles for the Bitcoin Price Tracker */
 body {
-    margin: 0;
     padding-left: 20px;
     padding-right: 20px;
-    background: #202020;
-    color: #ffffff;
+    background: #151515;
     font-family: monospace, Arial;
-    font-size: 12px;
-    font-feature-settings: normal;
     overflow-x: hidden;
     text-align: center;
+    color: #f0f0f0;
 }
-
-p {
-    font-size: 6px;
-}
-
-h1 {
-    color: #f7931a;
-}
-
-a {
-    color: #ff7500;
-}
-
-a:hover {
-    color: rgb(149, 0, 207);
-}
-
 .container {
     width: auto;
     margin-top: 20px;
-    background-color: #282828;
-    border: 3px solid #ccc;
-    border-radius: 8px;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    align-items: center; /* Center items vertically within the container */
-    justify-content: center; /* Center items horizontally within the container */
-}
-.price-display {
-    width: auto;
-    margin-right: 10px;
-    padding: 10px;
-    display: flex; /* Add this to create a flexbox layout */
-    align-items: center; /* Center items vertically within the container */
-    justify-content: center; /* Center items horizontally within the container */
-}
-
-#bitcoin-price {
-    font-size: 26px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.bitcoin-logo {
-    height: 50px;
-    /* Adjust this to match the font size of the Bitcoin price */
-    width: 50px;
-    margin-right: 10px;
-    /* Add some space between the logo and the price */
-}
-
-.bitcoin-logo img {
-    height: 50px;
-    /* Adjust this to match the font size of the Bitcoin price */
-    width: 50px;
-    /* Add some space between the logo and the price */
-}
-
-#dollars-to-sats {
-        width: auto;
-        margin-top: 20px;
-        background-color: #282828;
-        border: 3px solid #ccc;
-        border-radius: 8px;
-        padding: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        align-items: center; /* Center items vertically within the container */
-        justify-content: center; /* Center items horizontally within the container */
-        color: #ffffff;
-        font-family: monospace, Arial;
-        font-size: 20px;
-        font-style: bolder;
-}
-
-.satstodollars {
-    width: auto;
-    margin-top: 20px;
-    background-color: #282828;
-    border: 3px solid #ccc;
+    background-color: #252525;
+    border: 3px solid #f7931a;
     border-radius: 8px;
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -97,44 +20,23 @@ a:hover {
     justify-content: center; /* Center items horizontally within the container */
 }
 
-#sats-input {
-    font-size: 18px;
-    border-radius: 7px;
-    font-family: monospace;
-    background: #101010;
+h1 {
+    font-size: 30;
     font-style: bolder;
-    color: #f7931a;
-    margin-right: 5px;
-    padding-right: 5px;
-    text-align: center;
+}
+h2 {
+    font-size: 20;
+    font-style: bolder;
+}
+h3 {
+    font-size: 10;
+    font-style: bold;
 }
 
-  /* CSS for the container */
-  #exchange {
-    border: 2px solid #ffffff;
-    border-radius: 10px;
-    padding: 10px;
-    text-align: center;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-  }
+a {
+    color: #f7931a;
+}
 
-  /* CSS for the text */
-  #exchange h2 {
-    font-size: 12px;
-    margin-top: 0;
-  }
-
-  /* CSS for the app images */
-  .app-image {
-    display: inline-block;
-    margin: 6px;
-  }
-
-  .app-image img {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    border: 1px solid #909090;
-  }
+a:hover {
+    color: #8154e9;
+}
