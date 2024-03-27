@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         webView.clearCache(true)
 
         // Initialize with the default theme
-        currentThemeCSSCode = loadThemeCSS("themes/Dark.css")
+        currentThemeCSSCode = loadThemeCSS("style/output.css")
         loadWebViewWithTheme(currentThemeCSSCode)
     }
 
@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
 
         // Load the HTML content
         val htmlContent = try {
-            assetManager.open("app.html").bufferedReader().use { it.readText() }
+            assetManager.open("index.html").bufferedReader().use { it.readText() }
         } catch (e: IOException) {
             e.printStackTrace()
             "<html><body><h1>Error loading HTML</h1></body></html>"
@@ -46,11 +46,7 @@ class MainActivity : AppCompatActivity() {
 
         // Load all styles from the 'styles' directory
         val styleFiles = listOf(
-            "styles/settings.css",
-            "styles/bitcoinPrice.css",
-            "styles/exchange.css",
-            "styles/fiatToSats.css",
-            "styles/satsToFiat.css"
+            "style/output.css",
         )
 
         val styleContents = styleFiles.map { fileName ->
@@ -64,11 +60,7 @@ class MainActivity : AppCompatActivity() {
 
         // Load the JavaScript code
         val scriptFiles = listOf(
-            "scripts/selectTheme.js",
-            "scripts/viewBitcoinPrice.js",
-            "scripts/viewFiatToSats.js",
-            "scripts/selectCurrency.js",
-            "scripts/calcSatsToFiat.js"
+            "js/main.js",
         )
 
         val scriptContents = scriptFiles.map { fileName ->
@@ -80,31 +72,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-<<<<<<< HEAD
-        val cssFiles = listOf(
-            "style/output.css"
-            //"themes/Dark.css",
-            //"themes/Midnight.css",
-            //"themes/Lava.css",
-            //"themes/Solar.css",
-            //"styles/settings.css",
-            //"styles/bitcoinPrice.css",
-            //"styles/exchange.css",
-            //"styles/fiatToSats.css",
-            //"styles/satsToFiat.css"
-        ) // List of your CSS files
-
-        val cssCode = cssFiles.joinToString("\n") { fileName ->
-            try {
-                assetManager.open(fileName).bufferedReader().use { it.readText() }
-            } catch (e: IOException) {
-                e.printStackTrace()
-                "/* Error loading $fileName */"
-            }
-        }
-
-=======
->>>>>>> 444601f0cb9165b77f4c460bdf72f1cb567eb544
         val javaScriptCode = scriptContents.joinToString("\n")
 
         // Combine the HTML, CSS, and JavaScript code

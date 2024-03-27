@@ -1,5 +1,5 @@
 // fiatToSatsConverter.js
-function updateFiatToSatsConversion(selectedCurrency) {
+export function updateFiatToSatsConversion(selectedCurrency) {
     fetch(`https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=${selectedCurrency}`)
         .then(response => response.json())
         .then(data => {
@@ -12,14 +12,3 @@ function updateFiatToSatsConversion(selectedCurrency) {
         })
         .catch(error => console.error(error));
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    const currencySelect = document.getElementById('currency-select');
-    const selectedCurrency = currencySelect.value;
-    updateFiatToSatsConversion(selectedCurrency);
-
-    currencySelect.addEventListener('change', () => {
-        const selectedCurrency = currencySelect.value;
-        updateFiatToSatsConversion(selectedCurrency);
-    });
-});

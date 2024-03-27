@@ -1,5 +1,5 @@
 // satsToDollarsCalc.js
-function updateSatsToDollarsConversion() {
+export function updateSatsToDollarsConversion() {
     const satsInputElement = document.getElementById('sats-input');
     const dollarsOutputElement = document.getElementById('dollars-output');
 
@@ -24,9 +24,3 @@ function updateSatsToDollarsConversion() {
         dollarsOutputElement.textContent = '';
     }
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    const satsInputElement = document.getElementById('sats-input');
-
-    satsInputElement.addEventListener('input', updateSatsToDollarsConversion);
-});
