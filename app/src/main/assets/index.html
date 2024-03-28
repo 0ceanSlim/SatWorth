@@ -1,89 +1,95 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <!--<script src="https://cdn.tailwindcss.com"></script>-->
-    <link rel="stylesheet" href="style/output.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
-  <body class="bg-primary grid-cols-1 text-center text-text">
-    <div class="container">
-      <div class="settings">
-        <img src="file:///android_asset/images/cog.png" alt="cog" />
-        <div class="theme-dropdown">
-          <label for="theme-select"> </label>
-          <select id="theme-select">
-            <option value="dark">Dark</option>
-            <option value="lava">Lava</option>
-            <option value="midnight">Midnight</option>
-            <option value="solar">Solar</option>
-          </select>
-        </div>
-        <div class="currency-dropdown">
-          <label for="currency-select"> </label>
-          <select id="currency-select">
-            <option value="usd">U.S. Dollar</option>
-            <option value="ars">Argentine Peso</option>
-            <option value="brl">Brazilian Real</option>
-            <option value="cny">Chinese Yuan</option>
-            <option value="eur">Euros</option>
-            <option value="inr">Indian Rupee</option>
-            <option value="jpy">Yen</option>
-            <option value="ngn">Nigerian Naira</option>
-            <option value="pkr">Pakistani Rupee</option>
-            <option value="pln">Polish Zloty</option>
-            <option value="php">Philippine Peso</option>
-            <option value="rub">Russian Ruble</option>
-            <option value="thb">Thai Baht</option>
-            <option value="try">Turkish Lira</option>
-            <option value="uah">Ukrainian Hryvnia</option>
-            <option value="vnd">Dong</option>
-          </select>
-        </div>
-      </div>
-    </div>
 
-    <div class="container">
-      <div class="price-display">
-        <div class="bitcoin-logo">
-          <img src="file:///android_asset/images/logo.png" alt="BTC" />
-        </div>
-        <div id="bitcoin-price"></div>
-      </div>
-    </div>
+<head>
+  <!--<script src="https://cdn.tailwindcss.com"></script>-->
+  <link rel="stylesheet" href="style/output.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
 
-    <div class="container">
-      <div id="dollars-to-sats"></div>
+<body class="bg-bgPrimary text-text text-center">
+<div class="container border-solid border-1 border-bgInverted p-4">
+  <div class="settings rounded-md bg-bgSecondary p-1">
+    <img src="file:///android_asset/images/cog.png" alt="cog" class="w-16 h-8 w-8 t-2 l-2" />
+    <div class="theme-dropdown mt-4">
+      <label for="theme-select"></label>
+      <select id="theme-select" class="p-1 rounded-md bg-bgPrimary text-text">
+        <option value="dark">Dark</option>
+        <option value="lava">Lava</option>
+        <option value="midnight">Midnight</option>
+        <option value="solar">Solar</option>
+      </select>
     </div>
-
-    <div class="container">
-      <div class="satstodollars">
-        <h2>Sats to fiat Calc</h2>
-        <label for="sats-input">Enter the amount of Bitcoin in satoshis:</label>
-        <br />
-        <input type="number" id="sats-input" />
-        <br />
-        <output id="dollars-output"></output>
-      </div>
+    <div class="currency-dropdown mt-4">
+      <label for="currency-select"></label>
+      <select id="currency-select" class="p-1 rounded-md bg-bgPrimary text-text">
+        <option value="usd">U.S. Dollar</option>
+        <option value="ars">Argentine Peso</option>
+        <option value="brl">Brazilian Real</option>
+        <option value="cny">Chinese Yuan</option>
+        <option value="eur">Euros</option>
+        <option value="inr">Indian Rupee</option>
+        <option value="jpy">Yen</option>
+        <option value="ngn">Nigerian Naira</option>
+        <option value="pkr">Pakistani Rupee</option>
+        <option value="pln">Polish Zloty</option>
+        <option value="php">Philippine Peso</option>
+        <option value="rub">Russian Ruble</option>
+        <option value="thb">Thai Baht</option>
+        <option value="try">Turkish Lira</option>
+        <option value="uah">Ukrainian Hryvnia</option>
+        <option value="vnd">Dong</option>
+      </select>
     </div>
+  </div>
+</div>
 
-    <div id="exchange">
-      <h2>Buy Bitcoin Here 👇</h2>
+<div class="container mt-8">
+  <div class="price-display">
+    <div class="bitcoin-logo">
+      <img src="file:///android_asset/images/logo.png" alt="BTC" class="w-16 mx-auto" />
+    </div>
+    <div id="bitcoin-price" class="text-2xl font-semibold mt-4">Bitcoin Price: <span id="price-value">Loading...</span></div>
+  </div>
+</div>
+
+<div class="container mt-8">
+  <div class="flex justify-center">
+    <div class="w-64">
+     <div id="dollars-to-sats" class="text-lg font-semibold"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-8">
+  <div class="satstodollars">
+    <h2 class="text-xl font-semibold mb-4">Sats to Fiat Calculator</h2>
+    <label for="sats-input" class="block mb-2">Enter the amount of Bitcoin in satoshis:</label>
+    <input type="number" id="sats-input" class="w-3/4 p-2 border-2 border-bgSecondary rounded-md mb-4" placeholder="Enter amount in satoshis" />
+    <output id="dollars-output" class="block text-lg font-semibold">Converted Fiat: <span id="fiat-output">0</span></output>
+  </div>
+</div>
+
+<div class="container mt-8 p-4">
+  <div id="exchange">
+    <h2 class="text-2xl font-semibold mb-4">Buy Bitcoin Here 👇</h2>
+    <div class="flex justify-around">
       <div class="app-image">
-        <a href="https://www.swanbitcoin.com/oceanslim"
-          ><img src="file:///android_asset/images/swan.png" alt="App 1"
-        /></a>
+        <a href="https://www.swanbitcoin.com/oceanslim"><img src="file:///android_asset/images/swan.png"
+                                                             alt="App 1" class="w-32 mx-auto rounded-3xl p-1" /></a>
       </div>
       <div class="app-image">
-        <a href="https://river.com/signup?r=5WLPVSJQ"
-          ><img src="file:///android_asset/images/river.png" alt="App 2"
-        /></a>
+        <a href="https://river.com/signup?r=5WLPVSJQ"><img src="file:///android_asset/images/river.png"
+                                                           alt="App 2" class="w-32 mx-auto rounded-3xl p-1" /></a>
       </div>
       <div class="app-image">
-        <a href="https://cash.app/app/HRPBCNS"
-          ><img src="file:///android_asset/images/cashapp.png" alt="App 3"
-        /></a>
+        <a href="https://cash.app/app/HRPBCNS"><img src="file:///android_asset/images/cashapp.png"
+                                                    alt="App 3" class="w-32 mx-auto rounded-3xl p-1" /></a>
       </div>
     </div>
-    <!--<script type="module" src="js/main.js"></script>-->
-  </body>
+  </div>
+</div>
+<!--<script type="module" src="js/main.js"></script>-->
+</body>
+
 </html>
