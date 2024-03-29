@@ -1,61 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="dark">
   <head>
     <!--<script src="https://cdn.tailwindcss.com"></script>-->
     <link rel="stylesheet" href="style/output.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
 
-  <body class="ml-2 mr-2 text-center bg-bgPrimary text-text">
+  <body class="ml-2 mr-2 text-center font-mono bg-bgPrimary text-text">
     <div
       id="settings"
-      class="container p-2 mt-2 border-4 rounded-md border-bgInverted bg-bgSecondary"
+      class="container flex mt-2 border-2 rounded-md border-bgInverted bg-bgSecondary"
     >
-      <img
-        src="file:///android_asset/images/cog.png"
-        alt="cog"
-        class="w-8 h-8 t-2 l-2"
-      />
-      <div class="mt-4 theme-dropdown">
-        <select id="theme-select" class="p-1 rounded-md bg-bgPrimary text-text">
-          <option value="dark">Dark</option>
-          <option value="lava">Lava</option>
-          <option value="midnight">Midnight</option>
-          <option value="solar">Solar</option>
-        </select>
-      </div>
-      <div class="mt-4 currency-dropdown">
-        <select
-          id="currency-select"
-          class="p-1 rounded-md bg-bgPrimary text-text"
-        >
-          <option value="usd">U.S. Dollar</option>
-          <option value="ars">Argentine Peso</option>
-          <option value="brl">Brazilian Real</option>
-          <option value="cny">Chinese Yuan</option>
-          <option value="eur">Euros</option>
-          <option value="inr">Indian Rupee</option>
-          <option value="jpy">Yen</option>
-          <option value="ngn">Nigerian Naira</option>
-          <option value="pkr">Pakistani Rupee</option>
-          <option value="pln">Polish Zloty</option>
-          <option value="php">Philippine Peso</option>
-          <option value="rub">Russian Ruble</option>
-          <option value="thb">Thai Baht</option>
-          <option value="try">Turkish Lira</option>
-          <option value="uah">Ukrainian Hryvnia</option>
-          <option value="vnd">Dong</option>
-        </select>
+      <div class="container flex justify-center pb-4">
+        <div class="mt-4 theme-dropdown">
+          <select
+            id="theme-select"
+            class="p-1 mr-2 rounded-md bg-bgPrimary text-text"
+          >
+            <option value="dark">Dark</option>
+            <option value="light">Light</option>
+            <option value="lava">Lava</option>
+            <option value="midnight">Midnight</option>
+            <option value="solar">Solar</option>
+          </select>
+        </div>
+        <div class="mt-4 currency-dropdown">
+          <select
+            id="currency-select"
+            class="p-1 rounded-md bg-bgPrimary text-text"
+          >
+            <option value="usd">U.S. Dollar</option>
+            <option value="ars">Argentine Peso</option>
+            <option value="brl">Brazilian Real</option>
+            <option value="cny">Chinese Yuan</option>
+            <option value="eur">Euros</option>
+            <option value="inr">Indian Rupee</option>
+            <option value="jpy">Yen</option>
+            <option value="ngn">Nigerian Naira</option>
+            <option value="pkr">Pakistani Rupee</option>
+            <option value="pln">Polish Zloty</option>
+            <option value="php">Philippine Peso</option>
+            <option value="rub">Russian Ruble</option>
+            <option value="thb">Thai Baht</option>
+            <option value="try">Turkish Lira</option>
+            <option value="uah">Ukrainian Hryvnia</option>
+            <option value="vnd">Dong</option>
+          </select>
+        </div>
+        <img
+          src="file:///android_asset/images/cog.png"
+          alt="cog"
+          class="w-4 h-4 m-2 position-fixed t-2 r-2"
+          onerror="this.src='images/cog.png'"
+        />
       </div>
     </div>
 
     <div
-      class="container p-2 mt-4 border-4 rounded-md border-bgInverted bg-bgSecondary"
+      class="container p-2 mt-4 border-2 rounded-md border-bgInverted bg-bgSecondary"
     >
       <img
         src="file:///android_asset/images/logo.png"
         alt="btc"
         class="w-16 mx-auto"
+        onerror="this.src='images/logo.png'"
       />
 
       <div id="bitcoin-price" class="mt-4 text-2xl font-semibold">
@@ -63,29 +71,20 @@
       </div>
     </div>
 
-    <div class="container mt-8">
-      <div class="flex justify-center">
-        <div class="w-64">
-          <div
-            id="dollars-to-sats"
-            class="text-lg font-semibold border-4 rounded-md border-bgInverted bg-bgSecondary"
-          ></div>
-        </div>
-      </div>
-    </div>
+    <div
+      id="dollars-to-sats"
+      class="container mt-4 text-lg p-4 font-semibold border-2 rounded-md border-bgInverted bg-bgSecondary"
+    ></div>
 
     <div
-      class="container mt-8 border-4 rounded-md border-bgInverted bg-bgSecondary"
+      class="container mt-4 border-2 rounded-md border-bgInverted bg-bgSecondary"
     >
       <div class="satstodollars">
-        <h2 class="mb-4 text-xl font-semibold">Sats to Fiat Calculator</h2>
-        <label for="sats-input" class="block mb-2"
-          >Enter the amount of Bitcoin in satoshis:</label
-        >
+        <h2 class="mb-2 pt-2 text-xl font-semibold">Sats to Fiat Calculator</h2>
         <input
           type="number"
           id="sats-input"
-          class="w-3/4 p-2 mb-4 border-2 rounded-md border-bgPrimary"
+          class="w-3/4 p-2 mb-4 border-2 rounded-md border-bgPrimary text-textInverted"
           placeholder="Enter amount in satoshis"
         />
         <output
@@ -96,35 +95,34 @@
     </div>
 
     <div
-      class="container p-4 mt-8 border-4 rounded-md border-bgInverted bg-bgSecondary"
+      class="container w-1/4 top-0 float-right mr-4 p-4 mt-8 border-2 rounded-md border-bgInverted bg-bgSecondary"
     >
       <div id="exchange">
-        <h2 class="mb-4 text-2xl font-semibold">Buy Bitcoin Here 👇</h2>
+        <h2 class="mb-4 text-xs font-semibold">Buy Bitcoin Here 👇</h2>
         <div class="flex justify-around">
-          <div class="app-image">
-            <a href="https://www.swanbitcoin.com/oceanslim"
-              ><img
-                src="file:///android_asset/images/swan.png"
-                alt="App 1"
-                class="w-32 p-1 mx-auto rounded-3xl"
-            /></a>
-          </div>
-          <div class="app-image">
-            <a href="https://river.com/signup?r=5WLPVSJQ"
-              ><img
-                src="file:///android_asset/images/river.png"
-                alt="App 2"
-                class="w-32 p-1 mx-auto rounded-3xl"
-            /></a>
-          </div>
-          <div class="app-image">
-            <a href="https://cash.app/app/HRPBCNS"
-              ><img
-                src="file:///android_asset/images/cashapp.png"
-                alt="App 3"
-                class="w-32 p-1 mx-auto rounded-3xl"
-            /></a>
-          </div>
+          <a href="https://www.swanbitcoin.com/oceanslim"
+            ><img
+              src="file:///android_asset/images/swan.png"
+              alt="App 1"
+              class="w-16 p-1 mx-auto rounded-3xl"
+              onerror="this.src='images/swan.png'"
+          /></a>
+
+          <a href="https://river.com/signup?r=5WLPVSJQ"
+            ><img
+              src="file:///android_asset/images/river.png"
+              alt="App 2"
+              class="w-16 p-1 mx-auto rounded-3xl"
+              onerror="this.src='images/river.png'"
+          /></a>
+
+          <a href="https://cash.app/app/HRPBCNS"
+            ><img
+              src="file:///android_asset/images/cashapp.png"
+              alt="App 3"
+              class="w-16 p-1 mx-auto rounded-3xl"
+              onerror="this.src='images/cashapp.png'"
+          /></a>
         </div>
       </div>
     </div>

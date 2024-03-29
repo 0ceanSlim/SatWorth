@@ -15,6 +15,16 @@ function updateBitcoinPrice(selectedCurrency) {
         })
         .catch(error => console.error(error));
 }
+
+function handleThemeChange() {
+    var selectedTheme = document.getElementById("theme-select").value;
+    document.documentElement.setAttribute("data-theme", selectedTheme);
+  }
+
+  // Event listener for theme select change
+  document.getElementById("theme-select").addEventListener("change", handleThemeChange);
+
+
 //function refreshBitcoinPrice(selectedCurrency) {
 //    updateBitcoinPrice(selectedCurrency);
 //    setInterval(() => updateBitcoinPrice(selectedCurrency), 300000);
