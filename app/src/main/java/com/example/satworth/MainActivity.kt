@@ -39,11 +39,6 @@ class MainActivity : AppCompatActivity() {
         val assetManager = assets
         val scriptFiles = listOf(
             "js/main.js",
-            //"scripts/selectTheme.js",
-            //"scripts/viewBitcoinPrice.js",
-            //"scripts/viewFiatToSats.js",
-            //"scripts/selectCurrency.js",
-            //"scripts/calcSatsToFiat.js"
         )
 
         val scriptContents = scriptFiles.map { fileName ->
@@ -57,15 +52,6 @@ class MainActivity : AppCompatActivity() {
 
         val cssFiles = listOf(
             "style/output.css"
-            //"themes/Dark.css",
-            //"themes/Midnight.css",
-            //"themes/Lava.css",
-            //"themes/Solar.css",
-            //"styles/settings.css",
-            //"styles/bitcoinPrice.css",
-            //"styles/exchange.css",
-            //"styles/fiatToSats.css",
-            //"styles/satsToFiat.css"
         ) // List of your CSS files
 
         val cssCode = cssFiles.joinToString("\n") { fileName ->

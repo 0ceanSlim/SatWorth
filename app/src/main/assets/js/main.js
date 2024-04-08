@@ -1,9 +1,3 @@
-//import "/style/output.css";
-
-//import { updateFiatToSatsConversion } from "./viewFiatToSats";
-//import { updateBitcoinPrice, refreshBitcoinPrice } from "./viewBitcoinPrice";
-//import { updateSatsToDollarsConversion } from "./calcSatsToFiat";
-
 function updateBitcoinPrice(selectedCurrency) {
     fetch(`https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=${selectedCurrency}`)
         .then(response => response.json())
