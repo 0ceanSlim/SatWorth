@@ -6,8 +6,6 @@ import android.os.Bundle
 import android.webkit.WebView
 import android.webkit.WebSettings
 import java.io.IOException
-import android.content.Context
-import android.webkit.JavascriptInterface
 
 class MainActivity : AppCompatActivity() {
 
