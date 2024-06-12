@@ -78,6 +78,23 @@ function updateFiatToSatsConversion(selectedCurrency) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    const satsInputElement = document.getElementById('sats-input');
+    const currencySelect = document.getElementById('currency-select');
+    const selectedCurrency = currencySelect.value;
+    // Initially fetch Bitcoin price in USD
+    updateBitcoinPrice(selectedCurrency);
+    updateFiatToSatsConversion(selectedCurrency)
+
+    satsInputElement.addEventListener('input', updateSatsToDollarsConversion);
+
+    currencySelect.addEventListener('change', () => {
+        const selectedCurrency = currencySelect.value;
+        updateBitcoinPrice(selectedCurrency);
+        updateFiatToSatsConversion(selectedCurrency);
+        updateSatsToDollarsConversion(selectedCurrency);
+        updateFiatToSatsConversion(selectedCurrency)
+    });
+
     const savedTheme = (typeof Android !== 'undefined' && Android !== null) ? Android.getPreference("theme") : null;
     if (savedTheme) {
         document.getElementById("theme-select").value = savedTheme;
