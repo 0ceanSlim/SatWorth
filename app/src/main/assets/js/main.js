@@ -13,10 +13,23 @@ function updateBitcoinPrice(selectedCurrency) {
 function handleThemeChange() {
     var selectedTheme = document.getElementById("theme-select").value;
     document.documentElement.setAttribute("data-theme", selectedTheme);
+    savePreference("theme", selectedTheme);
   }
 
+function handleCurrencyChange() {
+    var selectedCurrency = document.getElementById("currency-select").value;
+    savePreference("currency", selectedCurrency);
+}
+
+function savePreference(key, value) {
+    if (typeof Android !== 'undefined' && Android !== null) {
+        Android.savePreference(key, value);
+    }
+}
+
   // Event listener for theme select change
-  document.getElementById("theme-select").addEventListener("change", handleThemeChange);
+document.getElementById("theme-select").addEventListener("change", handleThemeChange);
+document.getElementById("currency-select").addEventListener("change", handleCurrencyChange);
 
 
 //function refreshBitcoinPrice(selectedCurrency) {
@@ -65,22 +78,19 @@ function updateFiatToSatsConversion(selectedCurrency) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const satsInputElement = document.getElementById('sats-input');
-    const currencySelect = document.getElementById('currency-select');
-    const selectedCurrency = currencySelect.value;
-    // Initially fetch Bitcoin price in USD
-    updateBitcoinPrice(selectedCurrency);
-    updateFiatToSatsConversion(selectedCurrency)
+    const savedTheme = (typeof Android !== 'undefined' && Android !== null) ? Android.getPreference("theme") : null;
+    if (savedTheme) {
+        document.getElementById("theme-select").value = savedTheme;
+        document.documentElement.setAttribute("data-theme", savedTheme);
+    }
 
-    satsInputElement.addEventListener('input', updateSatsToDollarsConversion);
-
-    currencySelect.addEventListener('change', () => {
-        const selectedCurrency = currencySelect.value;
-        updateBitcoinPrice(selectedCurrency);
-        updateFiatToSatsConversion(selectedCurrency);
-        updateSatsToDollarsConversion(selectedCurrency);
-        updateFiatToSatsConversion(selectedCurrency)
-    });
+    const savedCurrency = (typeof Android !== 'undefined' && Android !== null) ? Android.getPreference("currency") : null;
+    if (savedCurrency) {
+        document.getElementById("currency-select").value = savedCurrency;
+        updateBitcoinPrice(savedCurrency);
+        updateFiatToSatsConversion(savedCurrency);
+        updateSatsToDollarsConversion(savedCurrency);
+    }
 });
 
 

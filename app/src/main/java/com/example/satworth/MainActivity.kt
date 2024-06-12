@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.webkit.WebView
 import android.webkit.WebSettings
 import java.io.IOException
+import android.content.Context
+import android.webkit.JavascriptInterface
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,6 +24,9 @@ class MainActivity : AppCompatActivity() {
         // Enable JavaScript support
         val webSettings: WebSettings = webView.settings
         webSettings.javaScriptEnabled = true
+
+        // Add JavaScript interface
+        webView.addJavascriptInterface(WebAppInterface(this), "Android")
 
         // Clear the WebView cache (optional)
         webView.clearCache(true)
@@ -82,5 +87,22 @@ class MainActivity : AppCompatActivity() {
         val baseUrl = "file:///android_asset/"
 
         webView.loadDataWithBaseURL(null, finalHtmlContent, "text/html", "UTF-8", null)
+    }
+}
+class WebAppInterface(private val context: Context) {
+
+    private val sharedPreferences = context.getSharedPreferences("AppPrefs", Context.MODE_PRIVATE)
+
+    @JavascriptInterface
+    fun savePreference(key: String, value: String) {
+        with(sharedPreferences.edit()) {
+            putString(key, value)
+            apply()
+        }
+    }
+
+    @JavascriptInterface
+    fun getPreference(key: String): String? {
+        return sharedPreferences.getString(key, null)
     }
 }
